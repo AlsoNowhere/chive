@@ -1,0 +1,35 @@
+{
+	"name": "chive",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"author": "",
+	"license": "MIT",
+	"scripts": {
+		"build:css": ".\\node_modules\\.bin\\gulp",
+		"build:css:min": ".\\node_modules\\.bin\\lessc ./src/less/chive.less ./dist/chive.css && .\\node_modules\\.bin\\crass ./dist/chive.css -> ./dist/chive.min.css",
+		"build:css:prod": "npm run build:css && npm run build:css:min",
+		"watch:css": ".\\node_modules\\.bin\\gulp watch:css",
+		"lint:less:fix": ".\\node_modules\\.bin\\stylelint --fix \"./src/less/**/*.less\"",
+		"lint": "npm run lint:less:fix"
+	},
+	"stylelint": {
+		"extends": "stylelint-config-recommended",
+		"ignoreFiles": [
+			"./wwwroot/css/less/archive/main.less"
+		],
+		"rules": {
+			"no-descending-specificity": null
+		}
+	},
+	"devDependencies": {
+		"crass": "^0.12.3",
+		"gulp": "^3.9.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-less": "^4.0.1",
+		"gulp-sourcemaps": "^2.6.4",
+		"less": "^3.9.0",
+		"stylelint": "^9.2.0",
+		"stylelint-config-recommended": "^2.1.0"
+	}
+}
