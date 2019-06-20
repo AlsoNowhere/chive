@@ -1,5 +1,5 @@
 # Chive
 
-Init:
-npm install
-npm run build:css
+Init:  
+npm install  
+npm run build:css  
