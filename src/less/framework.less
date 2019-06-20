@@ -1,0 +1,231 @@
+
+// Display
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+	vertical-align: top;
+}
+
+// Position
+.relative {
+	position: relative;
+}
+.absolute {
+	&.pinned {
+		&.top {
+			top: 0;
+		}
+		&.bottom {
+			bottom: 0;
+		}
+		&.right {
+			right: 0;
+		}
+		&.left {
+			left: 0;
+		}
+		&.no-top {
+			top: initial;
+		}
+		&.no-bottom {
+			bottom: initial;
+		}
+		&.no-right {
+			right: initial;
+		}
+		&.no-left {
+			left: initial;
+		}
+	}
+	position: absolute;
+}
+.fixed {
+	position: fixed;
+}
+.z-index {
+	z-index: 1;
+}
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// Dimensions (width, height).
+.width {
+	width: @size;
+}
+.width-large {
+	width: @sizeLarge;
+}
+.width-full {
+	width: 100%;
+}
+.width-screen {
+	width: 100vw;
+}
+.height {
+	height: @size;
+}
+.height-large {
+	height: @sizeLarge;
+}
+.height-full {
+	height: 100%;
+}
+.height-screen {
+	height: 100vh;
+}
+.constrain {
+	max-width: @maxWidth;
+}
+.deconstrain {
+	max-width: initial;
+}
+
+// Margins
+.reset-margin {
+	margin: 0;
+}
+.margin-bottom {
+	margin-bottom: @gap;
+}
+.margin-bottom-large {
+	margin-bottom: @size;
+}
+.margin-right {
+	margin-right: @gap;
+}
+.centred {
+	margin-left: auto;
+	margin-right: auto;
+}
+.push-right {
+	margin-right: 4px;
+}
+
+// Padding
+.reset-padding {
+	padding: 0;
+}
+.padding {
+	padding: @gap;
+}
+.padding-large {
+	padding: @size;
+}
+.padded {
+	padding: 0 @gap;
+}
+.padded-large {
+	padding: 0 @size;
+}
+.padded-top {
+	padding-top: @gap;
+}
+.padded-bottom {
+	padding-bottom: @gap;
+}
+.padded-right {
+	padding-right: @gap;
+}
+.padded-right-large {
+	padding-right: @size;
+}
+.padded-left {
+	padding-left: @gap;
+}
+.padded-left-large {
+	padding-left: @size;
+}
+.padded-top-large {
+	padding-top: @size;
+}
+.padded-bottom-large {
+	padding-bottom: @size;
+}
+.padded-bowl {
+	padding: 0 @gap @gap;
+}
+.padded-bowl-large {
+	padding: 0 @size @size;
+}
+
+// Borders
+.border {
+	border: 1px solid @smokeLight;
+}
+
+// Rounding
+.rounded {
+	border-radius: @rounding;
+}
+.no-rounding {
+	border-radius: 0;
+}
+.round {
+	border-radius: 50%;
+}
+
+// Shadow
+.shadow {
+	box-shadow: 2px 2px 2px @smoke;
+}
+
+// Cursor
+.click-cursor {
+	cursor: pointer;
+}
+
+// Animations
+.spin {
+	animation: 1s spin infinite linear;
+}
+
+// Overflow
+.overflow-x {
+	overflow-x: auto;
+}
+.trim {
+	overflow: hidden;
+}
+.visible {
+	overflow: visible;
+}
+
+// Other
+.hover {
+	&:hover {
+		background-color: lightgrey;
+	}
+	.transition;
+}
+.focus {
+	outline: none;
+	box-shadow: 0 0 3px 1px @focus;
+}
+.transition {
+	transition: 0.3s;
+}
+.no-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+// Overwrites (last to be checked)
+.no-margin {
+	margin: 0;
+}
+.no-padding {
+	padding: 0;
+}
+.none {
+	&:not(.clear-none) {
+		display: none;
+	}
+}

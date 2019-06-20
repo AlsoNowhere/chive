@@ -1,0 +1,46 @@
+
+.grid-container {
+	display: flex;
+	&.space-between {
+		justify-content: space-between;
+	}
+	&.flex-end {
+		justify-content: flex-end;
+	}
+	&.centre {
+		justify-content: center;
+	}
+}
+
+.-(@parts, @name){
+	@sizes: 0px, 768px, 1000px;
+	@names: small, medium, large;
+	.grid-A(@i: length(@names)) when (@i > 0) {
+
+		@l: extract(@names, @i);
+		@m: extract(@sizes, @i);
+		@media screen and (min-width: @m) {
+
+			.grid-B(@j: @parts) when (@j > 0) {
+
+				.grid@{name}@{l}-@{j} {
+					flex-basis: 100% / @parts * @j;
+					width: 100% / @parts * @j;
+				}
+
+				.grid-B((@j - 1));
+
+			} .grid-B;
+
+		}
+		.grid-A((@i - 1));
+
+	}
+	.grid-A;
+}
+
+// Add any size grid you want.
+// Remove a grid by commenting the line out.
+// Commenting both out will not cause any build errors.
+.-(12, -);
+// .-(7, -seven-);

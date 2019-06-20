@@ -1,0 +1,143 @@
+
+label {
+	// .grid-container;
+	.block;
+	.margin-bottom;
+	> span {
+		.padded-right;
+		.font-bold;
+		.line-height;
+		.no-wrap;
+		~ span {
+			padding-right: 0;
+			font-weight: normal;
+		}
+		&.required:after {
+			content: " *";
+			.tomato-text;
+		}
+	}
+}
+
+fieldset {
+	.reset-margin;
+	.reset-padding;
+	.margin-bottom;
+	border: none;
+	> legend {
+		.font-bold;
+		.line-height;
+	}
+}
+
+input,select,textarea {
+	.width-full;
+	.height;
+	.no-margin;
+	.padded;
+	.border;
+	.rounded;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	.line-height;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	.transition;
+	&.ng-invalid-required {
+		border-color: tomato;
+	}
+	&:focus {
+		outline: none;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 3px 1px @focus;
+	}
+	&::placeholder {
+		color: #999;
+	}
+	&.small {
+		width: 120px;
+	}
+}
+
+input {
+	&[type=checkbox],&[type=radio] {
+		.inline-block;
+		.width;
+		min-width: @size;
+		+ span {
+			.inline-block;
+			width: auto;
+		}
+	}
+	&[type=checkbox] {
+		.inline-block;
+		.relative;
+		.width;
+		.height;
+		.no-padding;
+		border: none;
+		box-shadow: none;
+		-webkit-appearance: none;
+		&:before {
+			content: "";
+			.inline-block;
+			.width;
+			.height;
+			.border;
+			.rounded;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		}
+		&:checked:after {
+			content: "";
+			.absolute;
+		    top: 5px;
+		    left: 10px;
+		    width: 7px;
+		    height: 14px;
+		    transform: rotate(45deg);
+		    border-bottom: 3px solid @smoke;
+		    border-right: 3px solid @smoke;
+		    border-radius: 1px;
+		    .fade-in;
+		}
+	}
+	&[type=radio] {
+		.inline-block;
+		.relative;
+		width: @size + 2px;
+		height: @size + 2px;
+		.no-padding;
+		border: none;
+		box-shadow: none;
+		-webkit-appearance: none;
+		&:before {
+			content: "";
+			.inline-block;
+			.width;
+			.height;
+			.border;
+			.round;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+		}
+		&:checked:after {
+			content: "";
+			.middle;
+			width: @size / 2 + 2px;
+			height: @size / 2 + 2px;
+			.round;
+			.theme-smoke;
+		    .fade-in;
+		}
+	}
+	+ span {
+		.width-full;
+		.padded-left;
+		.inline-block;
+		.line-height;
+		.click-cursor;
+	}
+}
+
+
+textarea {
+	min-height: @size * 3;
+	height: auto;
+}
