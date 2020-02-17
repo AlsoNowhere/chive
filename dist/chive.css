@@ -1,4 +1,6 @@
 /* Colours */
+/* Fonts */
+/* Buttons */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -53,7 +55,7 @@ article.modal {
   right: 0;
   bottom: 0;
   left: 0;
-  padding-top: 28px;
+  padding-top: 63px;
   background-color: rgba(0, 0, 0, 0.5);
   overflow-y: auto;
   animation: fade-in 0.3s forwards;
@@ -61,6 +63,54 @@ article.modal {
 }
 article.modal:not(.clear-none) {
   display: none;
+}
+article.modal.pinned.top {
+  top: 0;
+}
+article.modal.pinned.top.gap {
+  top: 7px;
+}
+article.modal.pinned.top.gap-large {
+  top: 42px;
+}
+article.modal.pinned.bottom {
+  bottom: 0;
+}
+article.modal.pinned.bottom.gap {
+  bottom: 7px;
+}
+article.modal.pinned.bottom.gap-large {
+  bottom: 42px;
+}
+article.modal.pinned.right {
+  right: 0;
+}
+article.modal.pinned.right.gap {
+  right: 7px;
+}
+article.modal.pinned.right.gap-large {
+  right: 42px;
+}
+article.modal.pinned.left {
+  left: 0;
+}
+article.modal.pinned.left.gap {
+  left: 7px;
+}
+article.modal.pinned.left.gap-large {
+  left: 42px;
+}
+article.modal.pinned.no-top {
+  top: initial;
+}
+article.modal.pinned.no-bottom {
+  bottom: initial;
+}
+article.modal.pinned.no-right {
+  right: initial;
+}
+article.modal.pinned.no-left {
+  left: initial;
 }
 article.modal.visible {
   display: block;
@@ -91,70 +141,28 @@ article.modal .content {
 article.modal .content header {
   position: relative;
   height: auto;
-  padding: 0 28px;
+  padding: 0 63px;
   background-color: transparent;
   border-bottom: 1px solid #e5e5e5;
   box-shadow: none;
   color: #444;
-  line-height: 56px;
+  line-height: 63px;
 }
 article.modal .content header button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  height: 56px;
+  min-width: 120px;
+  line-height: 63px;
+  font-size: 26px;
   background-color: transparent;
   border: none;
   color: #000;
-}
-article.modal .content header button.pinned.top {
+  position: absolute;
   top: 0;
-}
-article.modal .content header button.pinned.bottom {
-  bottom: 0;
-}
-article.modal .content header button.pinned.right {
   right: 0;
-}
-article.modal .content header button.pinned.left {
-  left: 0;
-}
-article.modal .content header button.pinned.no-top {
-  top: initial;
-}
-article.modal .content header button.pinned.no-bottom {
-  bottom: initial;
-}
-article.modal .content header button.pinned.no-right {
-  right: initial;
-}
-article.modal .content header button.pinned.no-left {
-  left: initial;
-}
-article.modal .content header button.top {
-  top: 0;
-}
-article.modal .content header button.bottom {
-  bottom: 0;
-}
-article.modal .content header button.right {
-  right: 0;
-}
-article.modal .content header button.left {
-  left: 0;
-}
-article.modal .content header button.no-top {
-  top: initial;
-}
-article.modal .content header button.no-bottom {
-  bottom: initial;
-}
-article.modal .content header button.no-right {
-  right: initial;
-}
-article.modal .content header button.no-left {
-  left: initial;
+  width: 63px;
+  min-width: 63px;
+  height: 63px;
+  margin: 0;
+  box-shadow: none;
 }
 article.modal .content header button.empty {
   background-color: transparent;
@@ -173,13 +181,123 @@ article.modal .content header button.empty:hover {
   background-color: #1bc2ab;
 }
 article.modal .content header button.large {
-  height: 56px;
+  min-width: 120px;
+  line-height: 63px;
+  font-size: 26px;
 }
 article.modal .content header button.text-white {
   color: #fff;
 }
 article.modal .content header button:hover {
   background-color: #1bc2ab;
+}
+article.modal .content header button.pinned.top {
+  top: 0;
+}
+article.modal .content header button.pinned.top.gap {
+  top: 7px;
+}
+article.modal .content header button.pinned.top.gap-large {
+  top: 42px;
+}
+article.modal .content header button.pinned.bottom {
+  bottom: 0;
+}
+article.modal .content header button.pinned.bottom.gap {
+  bottom: 7px;
+}
+article.modal .content header button.pinned.bottom.gap-large {
+  bottom: 42px;
+}
+article.modal .content header button.pinned.right {
+  right: 0;
+}
+article.modal .content header button.pinned.right.gap {
+  right: 7px;
+}
+article.modal .content header button.pinned.right.gap-large {
+  right: 42px;
+}
+article.modal .content header button.pinned.left {
+  left: 0;
+}
+article.modal .content header button.pinned.left.gap {
+  left: 7px;
+}
+article.modal .content header button.pinned.left.gap-large {
+  left: 42px;
+}
+article.modal .content header button.pinned.no-top {
+  top: initial;
+}
+article.modal .content header button.pinned.no-bottom {
+  bottom: initial;
+}
+article.modal .content header button.pinned.no-right {
+  right: initial;
+}
+article.modal .content header button.pinned.no-left {
+  left: initial;
+}
+article.modal .content header button.top {
+  top: 0;
+}
+article.modal .content header button.top.gap {
+  top: 7px;
+}
+article.modal .content header button.top.gap-large {
+  top: 42px;
+}
+article.modal .content header button.bottom {
+  bottom: 0;
+}
+article.modal .content header button.bottom.gap {
+  bottom: 7px;
+}
+article.modal .content header button.bottom.gap-large {
+  bottom: 42px;
+}
+article.modal .content header button.right {
+  right: 0;
+}
+article.modal .content header button.right.gap {
+  right: 7px;
+}
+article.modal .content header button.right.gap-large {
+  right: 42px;
+}
+article.modal .content header button.left {
+  left: 0;
+}
+article.modal .content header button.left.gap {
+  left: 7px;
+}
+article.modal .content header button.left.gap-large {
+  left: 42px;
+}
+article.modal .content header button.no-top {
+  top: initial;
+}
+article.modal .content header button.no-bottom {
+  bottom: initial;
+}
+article.modal .content header button.no-right {
+  right: initial;
+}
+article.modal .content header button.no-left {
+  left: initial;
+}
+article.modal .content header button.gap {
+  top: 7px;
+}
+article.modal .content header button.gap-large {
+  top: 42px;
+}
+article.modal .content header button.gap {
+  right: 7px;
+}
+article.modal .content header button.gap-large {
+  right: 42px;
 }
 article.modal .content header button:hover:before,
 article.modal .content header button:hover:after {
@@ -192,8 +310,8 @@ article.modal .content header button:after {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 28px;
-  height: 28px;
+  width: 42px;
+  height: 42px;
   box-shadow: inset 0 -2px 0 #444;
   transform-origin: 50% 50%;
   transition: 0.3s;
@@ -202,17 +320,49 @@ article.modal .content header button:before.pinned.top,
 article.modal .content header button:after.pinned.top {
   top: 0;
 }
+article.modal .content header button:before.pinned.top.gap,
+article.modal .content header button:after.pinned.top.gap {
+  top: 7px;
+}
+article.modal .content header button:before.pinned.top.gap-large,
+article.modal .content header button:after.pinned.top.gap-large {
+  top: 42px;
+}
 article.modal .content header button:before.pinned.bottom,
 article.modal .content header button:after.pinned.bottom {
   bottom: 0;
+}
+article.modal .content header button:before.pinned.bottom.gap,
+article.modal .content header button:after.pinned.bottom.gap {
+  bottom: 7px;
+}
+article.modal .content header button:before.pinned.bottom.gap-large,
+article.modal .content header button:after.pinned.bottom.gap-large {
+  bottom: 42px;
 }
 article.modal .content header button:before.pinned.right,
 article.modal .content header button:after.pinned.right {
   right: 0;
 }
+article.modal .content header button:before.pinned.right.gap,
+article.modal .content header button:after.pinned.right.gap {
+  right: 7px;
+}
+article.modal .content header button:before.pinned.right.gap-large,
+article.modal .content header button:after.pinned.right.gap-large {
+  right: 42px;
+}
 article.modal .content header button:before.pinned.left,
 article.modal .content header button:after.pinned.left {
   left: 0;
+}
+article.modal .content header button:before.pinned.left.gap,
+article.modal .content header button:after.pinned.left.gap {
+  left: 7px;
+}
+article.modal .content header button:before.pinned.left.gap-large,
+article.modal .content header button:after.pinned.left.gap-large {
+  left: 42px;
 }
 article.modal .content header button:before.pinned.no-top,
 article.modal .content header button:after.pinned.no-top {
@@ -239,207 +389,6 @@ article.modal .content header button:after {
 article.modal .content header button > span {
   box-shadow: none;
 }
-.block {
-  display: block;
-}
-.inline-block {
-  display: inline-block;
-  vertical-align: top;
-}
-.relative {
-  position: relative;
-}
-.absolute {
-  position: absolute;
-}
-.absolute.pinned.top {
-  top: 0;
-}
-.absolute.pinned.bottom {
-  bottom: 0;
-}
-.absolute.pinned.right {
-  right: 0;
-}
-.absolute.pinned.left {
-  left: 0;
-}
-.absolute.pinned.no-top {
-  top: initial;
-}
-.absolute.pinned.no-bottom {
-  bottom: initial;
-}
-.absolute.pinned.no-right {
-  right: initial;
-}
-.absolute.pinned.no-left {
-  left: initial;
-}
-.fixed {
-  position: fixed;
-}
-.z-index {
-  z-index: 1;
-}
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.width {
-  width: 28px;
-}
-.width-large {
-  width: 56px;
-}
-.width-full {
-  width: 100%;
-}
-.width-screen {
-  width: 100vw;
-}
-.height {
-  height: 28px;
-}
-.height-large {
-  height: 56px;
-}
-.height-full {
-  height: 100%;
-}
-.height-screen {
-  height: 100vh;
-}
-.constrain {
-  max-width: 1170px;
-}
-.deconstrain {
-  max-width: initial;
-}
-.reset-margin {
-  margin: 0;
-}
-.margin-bottom {
-  margin-bottom: 7px;
-}
-.margin-bottom-large {
-  margin-bottom: 28px;
-}
-.margin-right {
-  margin-right: 7px;
-}
-.centred {
-  margin-left: auto;
-  margin-right: auto;
-}
-.push-right {
-  margin-right: 4px;
-}
-.reset-padding {
-  padding: 0;
-}
-.padding {
-  padding: 7px;
-}
-.padding-large {
-  padding: 28px;
-}
-.padded {
-  padding: 0 7px;
-}
-.padded-large {
-  padding: 0 28px;
-}
-.padded-top {
-  padding-top: 7px;
-}
-.padded-bottom {
-  padding-bottom: 7px;
-}
-.padded-right {
-  padding-right: 7px;
-}
-.padded-right-large {
-  padding-right: 28px;
-}
-.padded-left {
-  padding-left: 7px;
-}
-.padded-left-large {
-  padding-left: 28px;
-}
-.padded-top-large {
-  padding-top: 28px;
-}
-.padded-bottom-large {
-  padding-bottom: 28px;
-}
-.padded-bowl {
-  padding: 0 7px 7px;
-}
-.padded-bowl-large {
-  padding: 0 28px 28px;
-}
-.border {
-  border: 1px solid #eaeaea;
-}
-.rounded {
-  border-radius: 4px;
-}
-.no-rounding {
-  border-radius: 0;
-}
-.round {
-  border-radius: 50%;
-}
-.shadow {
-  box-shadow: 2px 2px 2px #777;
-}
-.click-cursor {
-  cursor: pointer;
-}
-.spin {
-  animation: 1s spin infinite linear;
-}
-.overflow-x {
-  overflow-x: auto;
-}
-.trim {
-  overflow: hidden;
-}
-.visible {
-  overflow: visible;
-}
-.hover {
-  transition: 0.3s;
-}
-.hover:hover {
-  background-color: lightgrey;
-}
-.focus {
-  outline: none;
-  box-shadow: 0 0 3px 1px #1bc2ab;
-}
-.transition {
-  transition: 0.3s;
-}
-.no-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.no-margin {
-  margin: 0;
-}
-.no-padding {
-  padding: 0;
-}
-.none:not(.clear-none) {
-  display: none;
-}
 .text-centre {
   text-align: center;
 }
@@ -447,10 +396,16 @@ article.modal .content header button > span {
   text-align: right;
 }
 .line-height {
-  line-height: 28px;
+  line-height: 42px;
+}
+.line-height-button {
+  line-height: 40px;
+}
+.line-height-small {
+  line-height: 21px;
 }
 .line-height-large {
-  line-height: 56px;
+  line-height: 63px;
 }
 .font-bold {
   font-weight: bold;
@@ -468,10 +423,247 @@ h2.page-title {
   font-family: "Helvetica Neue", "Segoe UI", Helvetica, Verdana, sans-serif;
   color: #71706f;
 }
-a.link {
+.font-size {
+  font-size: 18px;
+}
+.font-size-large {
+  font-size: 26px;
+}
+label {
+  display: block;
+  margin-bottom: 7px;
+}
+label > span {
+  padding-right: 7px;
+  font-weight: bold;
+  line-height: 42px;
+  white-space: nowrap;
+}
+label > span.required:after {
+  content: " *";
+  color: tomato;
+}
+label > span ~ span {
+  padding-right: 0;
+  font-weight: normal;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
+  border: none;
+}
+fieldset > legend {
+  font-weight: bold;
+  line-height: 42px;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  height: 42px;
+  margin: 0;
+  padding: 0 7px;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  line-height: 42px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  transition: 0.3s;
+}
+input.ng-invalid-required,
+select.ng-invalid-required,
+textarea.ng-invalid-required {
+  border-color: tomato;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px 1px #1bc2ab;
+}
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+input.small,
+select.small,
+textarea.small {
+  width: 120px;
+}
+input.large,
+select.large,
+textarea.large {
+  height: 63px;
+  line-height: 63px;
+}
+input[type=checkbox],
+input[type=radio] {
+  display: inline-block;
+  vertical-align: top;
+  width: 42px;
+  min-width: 42px;
+}
+input[type=checkbox] + span,
+input[type=radio] + span {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+}
+input[type=checkbox].large,
+input[type=radio].large {
+  width: 63px;
+}
+input[type=checkbox] {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+input[type=checkbox]:before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+input[type=checkbox]:checked:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 7px;
+  height: 14px;
+  transform: rotate(45deg);
+  border-bottom: 3px solid #777;
+  border-right: 3px solid #777;
+  border-radius: 1px;
+  animation: 0.3s fade-in forwards;
+}
+input[type=checkbox]:checked:after.pinned.top {
+  top: 0;
+}
+input[type=checkbox]:checked:after.pinned.top.gap {
+  top: 7px;
+}
+input[type=checkbox]:checked:after.pinned.top.gap-large {
+  top: 42px;
+}
+input[type=checkbox]:checked:after.pinned.bottom {
+  bottom: 0;
+}
+input[type=checkbox]:checked:after.pinned.bottom.gap {
+  bottom: 7px;
+}
+input[type=checkbox]:checked:after.pinned.bottom.gap-large {
+  bottom: 42px;
+}
+input[type=checkbox]:checked:after.pinned.right {
+  right: 0;
+}
+input[type=checkbox]:checked:after.pinned.right.gap {
+  right: 7px;
+}
+input[type=checkbox]:checked:after.pinned.right.gap-large {
+  right: 42px;
+}
+input[type=checkbox]:checked:after.pinned.left {
+  left: 0;
+}
+input[type=checkbox]:checked:after.pinned.left.gap {
+  left: 7px;
+}
+input[type=checkbox]:checked:after.pinned.left.gap-large {
+  left: 42px;
+}
+input[type=checkbox]:checked:after.pinned.no-top {
+  top: initial;
+}
+input[type=checkbox]:checked:after.pinned.no-bottom {
+  bottom: initial;
+}
+input[type=checkbox]:checked:after.pinned.no-right {
+  right: initial;
+}
+input[type=checkbox]:checked:after.pinned.no-left {
+  left: initial;
+}
+input[type=checkbox].large:before {
+  height: 63px;
+  width: 63px;
+}
+input[type=checkbox].large:checked:after {
+  left: 14px;
+  width: 10px;
+  height: 26px;
+  border-bottom: 5px solid #777;
+  border-right: 5px solid #777;
+}
+input[type=radio] {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+input[type=radio]:before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+input[type=radio]:checked:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #777;
+  animation: 0.3s fade-in forwards;
+}
+input + span {
+  width: 100%;
+  padding-left: 7px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 42px;
+  cursor: pointer;
+}
+textarea {
+  min-height: 126px;
+  height: auto;
+}
+a.link,
+a.link-alt {
   display: block;
   text-decoration: none;
+}
+a.link {
   color: #444;
+}
+a.link-alt {
+  color: #fff;
 }
 button,
 a.button {
@@ -484,8 +676,9 @@ a.button {
   box-shadow: inset 0 -4px 0 #2f70d3;
   border: none;
   color: #fff;
-  line-height: 26px;
+  line-height: 40px;
   text-align: center;
+  font-size: 18px;
   text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
@@ -584,6 +777,10 @@ a.button.snow:focus {
   outline: none;
   box-shadow: inset 0 -4px 0 #dbdbdb, 0 0 3px 1px #1bc2ab;
 }
+button.snow a,
+a.button.snow a {
+  color: #444;
+}
 button.empty,
 a.button.empty {
   background-color: transparent;
@@ -600,21 +797,34 @@ a.button.empty:focus {
   outline: none;
   box-shadow: 0 0 3px 1px #1bc2ab;
 }
+button.empty a,
+a.button.empty a {
+  color: #444;
+}
 button.square,
 a.button.square {
-  min-width: 28px;
-  width: 28px;
+  min-width: 42px;
+  width: 42px;
+}
+button.square.small,
+a.button.square.small {
+  min-width: 21px;
+  width: 21px;
 }
 button.square.large,
 a.button.square.large {
-  min-width: 56px;
-  width: 56px;
+  min-width: 63px;
+  width: 63px;
+}
+button.small,
+a.button.small {
+  line-height: 21px;
 }
 button.large,
 a.button.large {
   min-width: 120px;
-  line-height: 56px;
-  font-size: 18px;
+  line-height: 63px;
+  font-size: 26px;
 }
 button[disabled],
 a.button[disabled] {
@@ -639,11 +849,13 @@ a.button[disabled] {
   background-color: #1bc2ab;
 }
 .button.large {
-  height: 56px;
+  min-width: 120px;
+  line-height: 63px;
+  font-size: 26px;
 }
 code {
   display: block;
-  padding: 0 28px;
+  padding: 0 63px;
   padding-top: 7px;
   padding-bottom: 7px;
   background-color: #fff9ef;
@@ -653,186 +865,6 @@ code {
 pre {
   margin: 0;
 }
-label {
-  display: block;
-  margin-bottom: 7px;
-}
-label > span {
-  padding-right: 7px;
-  font-weight: bold;
-  line-height: 28px;
-  white-space: nowrap;
-}
-label > span ~ span {
-  padding-right: 0;
-  font-weight: normal;
-}
-label > span.required:after {
-  content: " *";
-  color: tomato;
-}
-fieldset {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 7px;
-  border: none;
-}
-fieldset > legend {
-  font-weight: bold;
-  line-height: 28px;
-}
-input,
-select,
-textarea {
-  width: 100%;
-  height: 28px;
-  margin: 0;
-  padding: 0 7px;
-  border: 1px solid #eaeaea;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  line-height: 28px;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-  transition: 0.3s;
-}
-input.ng-invalid-required,
-select.ng-invalid-required,
-textarea.ng-invalid-required {
-  border-color: tomato;
-}
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px 1px #1bc2ab;
-}
-input::placeholder,
-select::placeholder,
-textarea::placeholder {
-  color: #999;
-}
-input.small,
-select.small,
-textarea.small {
-  width: 120px;
-}
-input[type=checkbox],
-input[type=radio] {
-  display: inline-block;
-  vertical-align: top;
-  width: 28px;
-  min-width: 28px;
-}
-input[type=checkbox] + span,
-input[type=radio] + span {
-  display: inline-block;
-  vertical-align: top;
-  width: auto;
-}
-input[type=checkbox] {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  border: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-}
-input[type=checkbox]:before {
-  content: "";
-  display: inline-block;
-  vertical-align: top;
-  width: 28px;
-  height: 28px;
-  border: 1px solid #eaeaea;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-input[type=checkbox]:checked:after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  width: 7px;
-  height: 14px;
-  transform: rotate(45deg);
-  border-bottom: 3px solid #777;
-  border-right: 3px solid #777;
-  border-radius: 1px;
-  animation: 0.3s fade-in forwards;
-}
-input[type=checkbox]:checked:after.pinned.top {
-  top: 0;
-}
-input[type=checkbox]:checked:after.pinned.bottom {
-  bottom: 0;
-}
-input[type=checkbox]:checked:after.pinned.right {
-  right: 0;
-}
-input[type=checkbox]:checked:after.pinned.left {
-  left: 0;
-}
-input[type=checkbox]:checked:after.pinned.no-top {
-  top: initial;
-}
-input[type=checkbox]:checked:after.pinned.no-bottom {
-  bottom: initial;
-}
-input[type=checkbox]:checked:after.pinned.no-right {
-  right: initial;
-}
-input[type=checkbox]:checked:after.pinned.no-left {
-  left: initial;
-}
-input[type=radio] {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-}
-input[type=radio]:before {
-  content: "";
-  display: inline-block;
-  vertical-align: top;
-  width: 28px;
-  height: 28px;
-  border: 1px solid #eaeaea;
-  border-radius: 50%;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-input[type=radio]:checked:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #777;
-  animation: 0.3s fade-in forwards;
-}
-input + span {
-  width: 100%;
-  padding-left: 7px;
-  display: inline-block;
-  vertical-align: top;
-  line-height: 28px;
-  cursor: pointer;
-}
-textarea {
-  min-height: 84px;
-  height: auto;
-}
 footer {
   position: fixed;
   z-index: 1;
@@ -840,10 +872,59 @@ footer {
   bottom: 0;
   left: 0;
   display: flex;
-  padding: 0 28px;
+  flex-wrap: wrap;
+  padding: 0 63px;
   line-height: 40px;
   background-color: #444;
   color: #fff;
+}
+footer.pinned.top {
+  top: 0;
+}
+footer.pinned.top.gap {
+  top: 7px;
+}
+footer.pinned.top.gap-large {
+  top: 42px;
+}
+footer.pinned.bottom {
+  bottom: 0;
+}
+footer.pinned.bottom.gap {
+  bottom: 7px;
+}
+footer.pinned.bottom.gap-large {
+  bottom: 42px;
+}
+footer.pinned.right {
+  right: 0;
+}
+footer.pinned.right.gap {
+  right: 7px;
+}
+footer.pinned.right.gap-large {
+  right: 42px;
+}
+footer.pinned.left {
+  left: 0;
+}
+footer.pinned.left.gap {
+  left: 7px;
+}
+footer.pinned.left.gap-large {
+  left: 42px;
+}
+footer.pinned.no-top {
+  top: initial;
+}
+footer.pinned.no-bottom {
+  bottom: initial;
+}
+footer.pinned.no-right {
+  right: initial;
+}
+footer.pinned.no-left {
+  left: initial;
 }
 footer.space-between {
   justify-content: space-between;
@@ -851,24 +932,17 @@ footer.space-between {
 footer.flex-end {
   justify-content: flex-end;
 }
-footer.centre {
-  justify-content: center;
-}
 header {
   background-color: #3d7fe3;
   color: #fff;
 }
 header h1 {
-  padding: 0 28px;
-  line-height: 56px;
+  padding: 0 63px;
+  line-height: 63px;
 }
-ul {
+ul.reset-list {
   list-style-type: none;
   list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=");
-  margin: 0;
-  padding: 0;
-}
-ul li {
   margin: 0;
   padding: 0;
 }
@@ -882,7 +956,7 @@ table td {
   position: relative;
   padding: 0 7px;
   border: 1px solid #eaeaea;
-  line-height: 27px;
+  line-height: 41px;
 }
 table th label,
 table td label {
@@ -912,72 +986,60 @@ section {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
-  padding: 28px;
+  padding: 42px;
 }
 section.full {
   max-width: 100%;
 }
 main {
-  margin-bottom: 56px;
+  margin-bottom: 63px;
 }
-.grid-container {
-  display: flex;
-}
-.grid-container.space-between {
-  justify-content: space-between;
-}
-.grid-container.flex-end {
-  justify-content: flex-end;
-}
-.grid-container.centre {
-  justify-content: center;
-}
-@media screen and (min-width: 1000px) {
-  .grid-large-12 {
+@media screen and (min-width: 0px) {
+  .grid-small-12 {
     flex-basis: 100%;
     width: 100%;
   }
-  .grid-large-11 {
+  .grid-small-11 {
     flex-basis: 91.66666667%;
     width: 91.66666667%;
   }
-  .grid-large-10 {
+  .grid-small-10 {
     flex-basis: 83.33333333%;
     width: 83.33333333%;
   }
-  .grid-large-9 {
+  .grid-small-9 {
     flex-basis: 75%;
     width: 75%;
   }
-  .grid-large-8 {
+  .grid-small-8 {
     flex-basis: 66.66666667%;
     width: 66.66666667%;
   }
-  .grid-large-7 {
+  .grid-small-7 {
     flex-basis: 58.33333333%;
     width: 58.33333333%;
   }
-  .grid-large-6 {
+  .grid-small-6 {
     flex-basis: 50%;
     width: 50%;
   }
-  .grid-large-5 {
+  .grid-small-5 {
     flex-basis: 41.66666667%;
     width: 41.66666667%;
   }
-  .grid-large-4 {
+  .grid-small-4 {
     flex-basis: 33.33333333%;
     width: 33.33333333%;
   }
-  .grid-large-3 {
+  .grid-small-3 {
     flex-basis: 25%;
     width: 25%;
   }
-  .grid-large-2 {
+  .grid-small-2 {
     flex-basis: 16.66666667%;
     width: 16.66666667%;
   }
-  .grid-large-1 {
+  .grid-small-1 {
     flex-basis: 8.33333333%;
     width: 8.33333333%;
   }
@@ -1032,52 +1094,52 @@ main {
     width: 8.33333333%;
   }
 }
-@media screen and (min-width: 0px) {
-  .grid-small-12 {
+@media screen and (min-width: 1000px) {
+  .grid-large-12 {
     flex-basis: 100%;
     width: 100%;
   }
-  .grid-small-11 {
+  .grid-large-11 {
     flex-basis: 91.66666667%;
     width: 91.66666667%;
   }
-  .grid-small-10 {
+  .grid-large-10 {
     flex-basis: 83.33333333%;
     width: 83.33333333%;
   }
-  .grid-small-9 {
+  .grid-large-9 {
     flex-basis: 75%;
     width: 75%;
   }
-  .grid-small-8 {
+  .grid-large-8 {
     flex-basis: 66.66666667%;
     width: 66.66666667%;
   }
-  .grid-small-7 {
+  .grid-large-7 {
     flex-basis: 58.33333333%;
     width: 58.33333333%;
   }
-  .grid-small-6 {
+  .grid-large-6 {
     flex-basis: 50%;
     width: 50%;
   }
-  .grid-small-5 {
+  .grid-large-5 {
     flex-basis: 41.66666667%;
     width: 41.66666667%;
   }
-  .grid-small-4 {
+  .grid-large-4 {
     flex-basis: 33.33333333%;
     width: 33.33333333%;
   }
-  .grid-small-3 {
+  .grid-large-3 {
     flex-basis: 25%;
     width: 25%;
   }
-  .grid-small-2 {
+  .grid-large-2 {
     flex-basis: 16.66666667%;
     width: 16.66666667%;
   }
-  .grid-small-1 {
+  .grid-large-1 {
     flex-basis: 8.33333333%;
     width: 8.33333333%;
   }
@@ -1132,14 +1194,38 @@ ul.nav-tabs:after {
 ul.nav-tabs:after.pinned.top {
   top: 0;
 }
+ul.nav-tabs:after.pinned.top.gap {
+  top: 7px;
+}
+ul.nav-tabs:after.pinned.top.gap-large {
+  top: 42px;
+}
 ul.nav-tabs:after.pinned.bottom {
   bottom: 0;
+}
+ul.nav-tabs:after.pinned.bottom.gap {
+  bottom: 7px;
+}
+ul.nav-tabs:after.pinned.bottom.gap-large {
+  bottom: 42px;
 }
 ul.nav-tabs:after.pinned.right {
   right: 0;
 }
+ul.nav-tabs:after.pinned.right.gap {
+  right: 7px;
+}
+ul.nav-tabs:after.pinned.right.gap-large {
+  right: 42px;
+}
 ul.nav-tabs:after.pinned.left {
   left: 0;
+}
+ul.nav-tabs:after.pinned.left.gap {
+  left: 7px;
+}
+ul.nav-tabs:after.pinned.left.gap-large {
+  left: 42px;
 }
 ul.nav-tabs:after.pinned.no-top {
   top: initial;
@@ -1156,33 +1242,328 @@ ul.nav-tabs:after.pinned.no-left {
 ul.nav-tabs + div {
   margin-top: -1px;
 }
-* {
-  box-sizing: border-box;
+.side-border-blueberry {
+  border-left: 5px solid #3d7fe3;
 }
-body {
+.side-border-apple {
+  border-left: 5px solid green;
+}
+.side-border-orange {
+  border-left: 5px solid orange;
+}
+.side-border-tomato {
+  border-left: 5px solid tomato;
+}
+.side-border-smoke {
+  border-left: 5px solid #777;
+}
+.side-border-smoke-light {
+  border-left: 5px solid #eaeaea;
+}
+.side-border-snow {
+  border-left: 5px solid #fff;
+}
+.side-border-black {
+  border-left: 5px solid #444;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex.space-between {
+  justify-content: space-between;
+}
+.flex.flex-end {
+  justify-content: flex-end;
+}
+.display-table {
+  display: table;
+}
+.relative {
+  position: relative;
+}
+.absolute.pinned.top,
+.fixed.pinned.top {
+  top: 0;
+}
+.absolute.pinned.top.gap,
+.fixed.pinned.top.gap {
+  top: 7px;
+}
+.absolute.pinned.top.gap-large,
+.fixed.pinned.top.gap-large {
+  top: 42px;
+}
+.absolute.pinned.bottom,
+.fixed.pinned.bottom {
+  bottom: 0;
+}
+.absolute.pinned.bottom.gap,
+.fixed.pinned.bottom.gap {
+  bottom: 7px;
+}
+.absolute.pinned.bottom.gap-large,
+.fixed.pinned.bottom.gap-large {
+  bottom: 42px;
+}
+.absolute.pinned.right,
+.fixed.pinned.right {
+  right: 0;
+}
+.absolute.pinned.right.gap,
+.fixed.pinned.right.gap {
+  right: 7px;
+}
+.absolute.pinned.right.gap-large,
+.fixed.pinned.right.gap-large {
+  right: 42px;
+}
+.absolute.pinned.left,
+.fixed.pinned.left {
+  left: 0;
+}
+.absolute.pinned.left.gap,
+.fixed.pinned.left.gap {
+  left: 7px;
+}
+.absolute.pinned.left.gap-large,
+.fixed.pinned.left.gap-large {
+  left: 42px;
+}
+.absolute.pinned.no-top,
+.fixed.pinned.no-top {
+  top: initial;
+}
+.absolute.pinned.no-bottom,
+.fixed.pinned.no-bottom {
+  bottom: initial;
+}
+.absolute.pinned.no-right,
+.fixed.pinned.no-right {
+  right: initial;
+}
+.absolute.pinned.no-left,
+.fixed.pinned.no-left {
+  left: initial;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.z-index {
+  z-index: 1;
+}
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.width {
+  width: 42px;
+}
+.width-small {
+  width: 21px;
+}
+.width-large {
+  width: 63px;
+}
+.width-full {
+  width: 100%;
+}
+.width-screen {
+  width: 100vw;
+}
+.height {
+  height: 42px;
+}
+.height-small {
+  height: 21px;
+}
+.height-large {
+  height: 63px;
+}
+.height-full {
+  height: 100%;
+}
+.height-screen {
+  height: 100vh;
+}
+.constrain {
+  max-width: 1170px;
+}
+.deconstrain {
+  max-width: initial;
+}
+.reset-margin {
   margin: 0;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
 }
-h1,
-h2,
-h3,
-p {
-  margin: 0;
+.margin-bottom {
+  margin-bottom: 7px;
 }
-a {
-  color: #3d7fe3;
+.margin-bottom-large {
+  margin-bottom: 63px;
+}
+.margin-right {
+  margin-right: 7px;
+}
+.margin-right-large {
+  margin-right: 63px;
+}
+.margin-left {
+  margin-left: 7px;
+}
+.margin-left-large {
+  margin-left: 63px;
+}
+.centred {
+  margin-left: auto;
+  margin-right: auto;
+}
+.push-right {
+  margin-right: 4px;
+}
+.reset-padding {
+  padding: 0;
+}
+.padding {
+  padding: 7px;
+}
+.padding-medium {
+  padding: 42px;
+}
+.padding-large {
+  padding: 63px;
+}
+.padded {
+  padding: 0 7px;
+}
+.padded-medium {
+  padding: 0 42px;
+}
+.padded-large {
+  padding: 0 63px;
+}
+.padded-top {
+  padding-top: 7px;
+}
+.padded-top-medium {
+  padding-top: 42px;
+}
+.padded-top-large {
+  padding-top: 63px;
+}
+.padded-bottom {
+  padding-bottom: 7px;
+}
+.padded-right {
+  padding-right: 7px;
+}
+.padded-right-medium {
+  padding-right: 42px;
+}
+.padded-right-large {
+  padding-right: 63px;
+}
+.padded-left {
+  padding-left: 7px;
+}
+.padded-left-large {
+  padding-left: 63px;
+}
+.padded-left-medium {
+  padding-left: 42px;
+}
+.padded-bottom-large {
+  padding-bottom: 63px;
+}
+.padded-bowl {
+  padding: 0 7px 7px;
+}
+.padded-bowl-medium {
+  padding: 0 63px 42px;
+}
+.padded-bowl-large {
+  padding: 0 63px 63px;
+}
+.border {
+  border: 1px solid #eaeaea;
+}
+.rounded {
+  border-radius: 4px;
+}
+.no-rounding {
+  border-radius: 0;
+}
+.round {
+  border-radius: 50%;
+}
+.shadow {
+  box-shadow: 2px 2px 2px #777;
+}
+.no-shadow {
+  box-shadow: none;
+}
+.click-cursor {
+  cursor: pointer;
+}
+.not-allowed {
+  cursor: not-allowed;
+}
+.spin {
+  animation: 1s spin infinite linear;
+}
+.fade-in {
+  animation: 0.3s fade-in forwards;
+}
+.fade-out {
+  animation: 0.3s fade-out forwards;
+}
+.overflow-x {
+  overflow-x: auto;
+}
+.trim {
+  overflow: hidden;
+}
+.visible {
+  overflow: visible;
+}
+.hover {
   transition: 0.3s;
 }
-a:hover {
-  color: #777;
+.hover:hover {
+  background-color: lightgrey;
 }
-a.box-link {
-  color: #fff;
-  text-decoration: none;
+.focus {
+  outline: none;
+  box-shadow: 0 0 3px 1px #1bc2ab;
 }
-.glyphicons {
-  display: inline;
+.transition {
+  transition: 0.3s;
+}
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.none:not(.clear-none) {
+  display: none;
 }
 .theme-blueberry {
   background-color: #3d7fe3;
@@ -1232,3 +1613,32 @@ a.box-link {
 .black-text {
   color: #444;
 }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+a {
+  color: #3d7fe3;
+  transition: 0.3s;
+}
+a:hover {
+  color: #777;
+}
+a.box-link {
+  color: #fff;
+  text-decoration: none;
+}
+.glyphicons {
+  display: inline;
+}
+/* Customise */

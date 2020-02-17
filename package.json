@@ -7,11 +7,9 @@
 	"license": "MIT",
 	"scripts": {
 		"build:css": ".\\node_modules\\.bin\\gulp",
-		"build:css:min": ".\\node_modules\\.bin\\lessc ./src/less/chive.less ./dist/chive.css && .\\node_modules\\.bin\\crass ./dist/chive.css -> ./dist/chive.min.css",
-		"build:css:prod": "npm run build:css && npm run build:css:min",
+		"build:css:min": ".\\node_modules\\.bin\\gulp && .\\node_modules\\.bin\\crass ./dist/chive.css -> ./dist/chive.min.css",
 		"watch:css": ".\\node_modules\\.bin\\gulp watch:css",
-		"lint:less:fix": ".\\node_modules\\.bin\\stylelint --fix \"./src/less/**/*.less\"",
-		"lint": "npm run lint:less:fix"
+		"lint:less": ".\\node_modules\\.bin\\stylelint \"./src/less/**/*.less\""
 	},
 	"stylelint": {
 		"extends": "stylelint-config-recommended",
