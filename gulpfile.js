@@ -4,7 +4,7 @@ const less = require("gulp-less");
 const path = require("path");
 
 gulp.task("build:css", function () {
-	return gulp.src("./src/less/chive.less")
+	return gulp.src("./src/chive.less")
 		.pipe(less({
 			paths: [ path.join(__dirname, "less", "includes") ]
 		}))
@@ -12,7 +12,7 @@ gulp.task("build:css", function () {
 });
 
 gulp.task("watch:css",()=>{
-	gulp.watch("./src/less/**/*.less",["build:css"]);
+	gulp.watch("./src/**/*.less",["build:css"]);
 });
 
 gulp.task("default", ["build:css"]);

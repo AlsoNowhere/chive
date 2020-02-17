@@ -1,20 +1,7 @@
 
-.grid-container {
-	display: flex;
-	&.space-between {
-		justify-content: space-between;
-	}
-	&.flex-end {
-		justify-content: flex-end;
-	}
-	&.centre {
-		justify-content: center;
-	}
-}
-
 .-(@parts, @name){
-	@sizes: 0px, 768px, 1000px;
-	@names: small, medium, large;
+	@sizes: 1000px, 768px, 0px;
+	@names: large, medium, small;
 	.grid-A(@i: length(@names)) when (@i > 0) {
 
 		@l: extract(@names, @i);
