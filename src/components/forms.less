@@ -1,0 +1,91 @@
+@import "../core/display.less";
+
+.form label {
+  .block;
+  .margin-bottom;
+
+  span {
+    .block;
+    .margin-bottom-small;
+  }
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  .padded;
+  .border;
+  .rounding;
+  line-height: 2rem;
+  font-family: @fontFamily;
+  font-size: 1rem;
+  .focus;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.large {
+    line-height: 4rem;
+    font-size: @fontLarge;
+  }
+}
+
+input {
+  &[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    .block;
+    position: relative;
+    .width;
+    .height;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &::before {
+      content: "";
+      .block;
+      position: absolute;
+      .middle;
+      width: (@size * 0.8);
+      height: (@size * 0.8);
+      .border;
+      .round;
+    }
+
+    &:checked::after {
+      content: "";
+      .block;
+      position: absolute;
+      .middle;
+      width: (@size * 0.4);
+      height: (@size * 0.4);
+      .black-bg;
+      .round;
+    }
+
+    &.large {
+      .width-large;
+      .height-large;
+
+      &::before {
+        width: (@sizeLarge * 0.8);
+        height: (@sizeLarge * 0.8);
+      }
+    }
+  }
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  legend {
+    padding: 0;
+  }
+}
