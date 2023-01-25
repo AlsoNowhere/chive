@@ -1,0 +1,21 @@
+.build(@parts) {
+  @sizes: 1000px, 768px, 0px;
+  @names: large, medium, small;
+
+  .grid-D(@j: @parts) when (@j > 0) {
+    .grid-@{j} {
+      flex-basis: ((100% / @parts) * @j);
+      width: ((100% / @parts) * @j);
+    }
+
+    .grid-D((@j - 1));
+  }
+
+  .grid-D;
+}
+
+// Add any size grid you want.
+// Remove a grid by commenting the line out.
+// Commenting both out will not cause build errors.
+.build(12);
+// .build(7, -seven);
