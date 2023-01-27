@@ -9,7 +9,7 @@
 }
 
 .button-shadow-focus(@dark) {
-  box-shadow: inset 0 -4px 0 @dark, 1px 1px 1px 2px @focus;
+  box-shadow: inset 0 -4px 0 @dark, 0 0 2px 3px @focus;
 }
 
 button,
@@ -19,10 +19,11 @@ button,
   .button-border(@snowDark);
   border-radius: @rounding;
   .button-shadow(@snowDark);
-  .line-height-large;
+  .line-height;
   font-family: @fontFamily;
   font-size: 1rem;
   cursor: pointer;
+  text-align: center;
   .hover;
   .focus;
 
@@ -48,6 +49,7 @@ button,
   &.square {
     .width;
     .height;
+    padding: 0;
 
     &.large {
       width: @sizeLarge;
