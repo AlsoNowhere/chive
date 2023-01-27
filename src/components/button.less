@@ -1,0 +1,139 @@
+@import "../core/focus.less";
+
+.button-border(@dark) {
+  border: 1px solid @dark;
+}
+
+.button-shadow(@dark) {
+  box-shadow: inset 0 -4px 0 @dark;
+}
+
+.button-shadow-focus(@dark) {
+  box-shadow: inset 0 -4px 0 @dark, 0 0 2px 3px @focus;
+}
+
+button,
+.button {
+  .padded;
+  .snow-bg;
+  .button-border(@snowDark);
+  border-radius: @rounding;
+  .button-shadow(@snowDark);
+  .line-height;
+  font-family: @fontFamily;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  .hover;
+  .focus;
+
+  &:disabled {
+    background-color: @smoke;
+    .button-border(@appleDark);
+    .button-shadow(@appleDark);
+    color: #fff;
+  }
+
+  &.empty {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    .hover;
+
+    &:hover {
+      .black-text;
+    }
+    .focus;
+  }
+
+  &.square {
+    .width;
+    .height;
+    padding: 0;
+
+    &.large {
+      width: @sizeLarge;
+    }
+  }
+
+  &.large {
+    height: @sizeLarge;
+    .font-size-large;
+  }
+
+  &.snow {
+    .snow-bg;
+    .button-border(@snowDark);
+    .button-shadow(@snowDark);
+    color: @black;
+    &:hover {
+      background-color: @snowDark;
+    }
+    &:focus {
+      .button-shadow-focus(@snowDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+      color: #fff;
+    }
+  }
+
+  &.blueberry {
+    .blueberry-bg;
+    .button-border(@blueberryDark);
+    .button-shadow(@blueberryDark);
+    color: #fff;
+    &:hover {
+      background-color: @blueberryDark;
+    }
+    &:focus {
+      .button-shadow-focus(@blueberryDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+      color: #fff;
+    }
+  }
+
+  &.apple {
+    .apple-bg;
+    .button-border(@appleDark);
+    .button-shadow(@appleDark);
+    color: #fff;
+    &:hover {
+      background-color: @appleDark;
+    }
+    &:focus {
+      .button-shadow-focus(@appleDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+      color: #fff;
+    }
+  }
+
+  &.orange {
+    .orange-bg;
+    .button-border(@orangeDark);
+    .button-shadow(@orangeDark);
+    color: #fff;
+    &:hover {
+      background-color: @orangeDark;
+    }
+    &:focus {
+      .button-shadow-focus(@orangeDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+      color: #fff;
+    }
+  }
+}
