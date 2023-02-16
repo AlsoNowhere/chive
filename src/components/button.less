@@ -27,6 +27,11 @@ button,
   .hover;
   .focus;
 
+  &:focus {
+    position: relative;
+    z-index: 1;
+  }
+
   &:disabled {
     background-color: @smoke;
     .button-border(@appleDark);
