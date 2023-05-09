@@ -19,8 +19,8 @@ textarea,
 select {
   width: 100%;
   .border;
-  .rounding;
-  line-height: 2rem;
+  .rounded;
+  line-height: calc(2rem - @borderSize * 2);
   font-family: @fontFamily;
   font-size: 1rem;
   .focus;
@@ -101,6 +101,10 @@ input {
       .round;
     }
   }
+}
+
+select {
+  height: calc(@size + 2px);
 }
 
 textarea {

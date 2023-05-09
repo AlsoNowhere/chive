@@ -1,0 +1,64 @@
+@keyframes modal-in {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes modal-out {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .transition;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &.open {
+    display: block;
+    animation: @time modal-in ease forwards;
+
+    &.closing {
+      animation: @time modal-out ease forwards;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    .z-index;
+    .middle;
+    width: 25%;
+    .snow-bg;
+    .rounded;
+    .trim;
+  }
+
+  &__header {
+    width: 100%;
+    .margin-bottom;
+    .padded;
+    .shadow;
+    .line-height;
+  }
+}

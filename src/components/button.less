@@ -14,6 +14,7 @@
 
 button,
 .button {
+  .height;
   .padded;
   .snow-bg;
   .button-border(@snowDark);
@@ -85,6 +86,25 @@ button,
     }
   }
 
+  &.smoke {
+    .smoke-bg;
+    .button-border(@smokeDark);
+    .button-shadow(@smokeDark);
+    color: @snow;
+    &:hover {
+      background-color: @smokeDark;
+    }
+    &:focus {
+      .button-shadow-focus(@smokeDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+      color: #fff;
+    }
+  }
+
   &.blueberry {
     .blueberry-bg;
     .button-border(@blueberryDark);
@@ -133,6 +153,25 @@ button,
     }
     &:focus {
       .button-shadow-focus(@orangeDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+      color: #fff;
+    }
+  }
+
+  &.tomato {
+    .tomato-bg;
+    .button-border(@tomatoDark);
+    .button-shadow(@tomatoDark);
+    color: #fff;
+    &:hover {
+      background-color: @tomatoDark;
+    }
+    &:focus {
+      .button-shadow-focus(@tomatoDark);
     }
     &:disabled {
       background-color: @smoke;
