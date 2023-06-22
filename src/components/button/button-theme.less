@@ -1,0 +1,140 @@
+button,
+.button {
+  &.snow,
+  &.smoke,
+  &.blueberry,
+  &.apple,
+  &.orange,
+  &.tomato {
+    &.blueberry-text {
+      .blueberry-text;
+    }
+
+    &.apple-text {
+      .apple-text;
+    }
+
+    &.orange-text {
+      .orange-text;
+    }
+
+    &.tomato-text {
+      .tomato-text;
+    }
+
+    &:disabled {
+      color: #fff;
+    }
+  }
+
+  &.smoke,
+  &.blueberry,
+  &.apple,
+  &.orange,
+  &.tomato {
+    color: @snow;
+  }
+
+  &.snow {
+    .snow-bg;
+    .button-border(@snowDark);
+    .button-shadow(@snowDark);
+    color: @black;
+    &:hover {
+      background-color: @snowDark;
+    }
+    &:focus {
+      .button-shadow-focus(@snowDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+    }
+  }
+
+  &.smoke {
+    .smoke-bg;
+    .button-border(@smokeDark);
+    .button-shadow(@smokeDark);
+    &:hover {
+      background-color: @smokeDark;
+    }
+    &:focus {
+      .button-shadow-focus(@smokeDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+    }
+  }
+
+  &.blueberry {
+    .blueberry-bg;
+    .button-border(@blueberryDark);
+    .button-shadow(@blueberryDark);
+    &:hover {
+      background-color: @blueberryDark;
+    }
+    &:focus {
+      .button-shadow-focus(@blueberryDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+    }
+  }
+
+  &.apple {
+    .apple-bg;
+    .button-border(@appleDark);
+    .button-shadow(@appleDark);
+    &:hover {
+      background-color: @appleDark;
+    }
+    &:focus {
+      .button-shadow-focus(@appleDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+    }
+  }
+
+  &.orange {
+    .orange-bg;
+    .button-border(@orangeDark);
+    .button-shadow(@orangeDark);
+    &:hover {
+      background-color: @orangeDark;
+    }
+    &:focus {
+      .button-shadow-focus(@orangeDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+    }
+  }
+
+  &.tomato {
+    .tomato-bg;
+    .button-border(@tomatoDark);
+    .button-shadow(@tomatoDark);
+    &:hover {
+      background-color: @tomatoDark;
+    }
+    &:focus {
+      .button-shadow-focus(@tomatoDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+    }
+  }
+}

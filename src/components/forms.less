@@ -1,16 +1,18 @@
 @import "../core/display.less";
 
-form label {
-  .block;
-  .margin-bottom;
+form {
+  label {
+    display: block;
+    .margin-bottom;
 
-  > span {
-    .block;
-    .margin-bottom-small;
-  }
+    > span {
+      .block;
+      .margin-bottom-small;
+    }
 
-  &.checkbox {
-    display: flex;
+    &.checkbox {
+      display: flex;
+    }
   }
 }
 
@@ -88,6 +90,7 @@ input {
     + span {
       display: inline-block;
       vertical-align: top;
+      margin-left: @gap;
       line-height: @size;
     }
   }
@@ -118,6 +121,8 @@ fieldset {
   border: none;
 
   legend {
+    display: block;
+    .margin-bottom;
     padding: 0;
   }
 }
