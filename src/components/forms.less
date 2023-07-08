@@ -85,6 +85,15 @@ input {
         width: (@sizeLarge * 0.8);
         height: (@sizeLarge * 0.8);
       }
+
+      &::after {
+        width: (@size * 0.8);
+        height: (@size * 0.8);
+      }
+
+      + span {
+        .line-height-large;
+      }
     }
 
     + span {
