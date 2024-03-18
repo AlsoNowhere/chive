@@ -1,18 +1,18 @@
 @keyframes modal-in {
   from {
-    top: -100%;
+    top: -50%;
   }
   to {
-    top: 0;
+    top: 50%;
   }
 }
 
 @keyframes modal-out {
   from {
-    top: 0;
+    top: 50%;
   }
   to {
-    top: -100%;
+    top: -50%;
   }
 }
 
@@ -41,15 +41,15 @@
 .modal {
   display: none;
   position: fixed;
-  top: -100%;
+  top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   height: 100%;
-  .transition;
 
   &::after {
     content: "";
+    .fade-in;
     position: absolute;
     top: 0;
     left: 0;
@@ -58,22 +58,34 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  &.open {
+  &.open:not(.modal--animate-centre) {
     display: block;
-    animation: @modalTime modal-in ease forwards;
+
+    .modal__content {
+      animation: @modalTime modal-in ease forwards;
+    }
 
     &.closing {
-      animation: @modalTime modal-out ease forwards;
+      &::after {
+        .fade-out;
+      }
+
+      .modal__content {
+        animation: @modalTime modal-out ease forwards;
+      }
     }
   }
 
+  /* Adding padding will affect the heading too */
   &__content {
     position: absolute;
     .z-index;
-    .middle;
+    top: 50%;
+    left: 50%;
     width: 25%;
     .snow-bg;
     .rounded;
+    transform: translate(-50%, -50%);
     .trim;
   }
 
@@ -85,8 +97,44 @@
     .line-height;
 
     &--large {
-      .line-height-large;
+      line-height: @sizeLarge;
       .font-size-large;
+    }
+
+    &.blueberry {
+      .blueberry-bg;
+    }
+
+    &.apple {
+      .apple-bg;
+    }
+
+    &.lemon {
+      .lemon-bg;
+    }
+
+    &.orange {
+      .orange-bg;
+    }
+
+    &.tomato {
+      .tomato-bg;
+    }
+
+    &.snow {
+      .snow-bg;
+    }
+
+    &.smoke {
+      .smoke-bg;
+    }
+
+    &.black {
+      .black-bg;
+    }
+
+    h2 {
+      margin: 0;
     }
   }
 
@@ -94,24 +142,24 @@
     .padding;
   }
 
-  &--centre {
+  &--animate-centre {
     .middle;
 
     &.open {
       display: block;
-      animation: calc(@modalTime / 2) modal-in-centre ease forwards;
+      animation: (@modalTime / 2) modal-in-centre ease forwards;
 
       .modal__content {
-        animation: calc(@modalTime / 2) fadeIn ease forwards;
-        animation-delay: calc(@modalTime / 2);
+        animation: (@modalTime / 2) fade-in ease forwards;
+        animation-delay: (@modalTime / 2);
       }
 
       &.closing {
-        animation: calc(@modalTime / 2) modal-out-centre ease forwards;
-        animation-delay: calc(@modalTime / 2);
+        animation: (@modalTime / 2) modal-out-centre ease forwards;
+        animation-delay: (@modalTime / 2);
 
         .modal__content {
-          animation: calc(@modalTime / 2) fadeOut ease forwards;
+          animation: (@modalTime / 2) fade-out ease forwards;
         }
       }
     }

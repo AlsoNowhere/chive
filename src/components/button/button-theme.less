@@ -39,7 +39,6 @@ button,
     .snow-bg;
     .button-border(@snowDark);
     .button-shadow(@snowDark);
-    color: @black;
     &:hover {
       background-color: @snowDark;
     }
@@ -70,6 +69,42 @@ button,
     }
   }
 
+  &.smoke-light {
+    .smoke-light-bg;
+    .button-border(@smoke);
+    .button-shadow(@smoke);
+    color: @blackDark;
+    &:hover {
+      background-color: @smoke;
+    }
+    &:focus {
+      .button-shadow-focus(@smoke);
+    }
+    &:disabled {
+      background-color: @smokeLight;
+      .button-border(@smoke);
+      .button-shadow(@smoke);
+    }
+  }
+
+  &.black {
+    .black-bg;
+    .button-border(@blackDark);
+    .button-shadow(@blackDark);
+    color: @snow;
+    &:hover {
+      background-color: @blackDark;
+    }
+    &:focus {
+      .button-shadow-focus(@blackDark);
+    }
+    &:disabled {
+      background-color: @black;
+      .button-border(@blackDark);
+      .button-shadow(@blackDark);
+    }
+  }
+
   &.blueberry {
     .blueberry-bg;
     .button-border(@blueberryDark);
@@ -96,6 +131,23 @@ button,
     }
     &:focus {
       .button-shadow-focus(@appleDark);
+    }
+    &:disabled {
+      background-color: @smoke;
+      .button-border(@smokeDark);
+      .button-shadow(@smokeDark);
+    }
+  }
+
+  &.lemon {
+    .lemon-bg;
+    .button-border(@lemonDark);
+    .button-shadow(@lemonDark);
+    &:hover {
+      background-color: @lemonDark;
+    }
+    &:focus {
+      .button-shadow-focus(@lemonDark);
     }
     &:disabled {
       background-color: @smoke;
