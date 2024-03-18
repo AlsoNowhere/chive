@@ -1,5 +1,9 @@
+.reset-padding {
+  padding: 0;
+}
+
 .padded {
-  padding: 0 @rem;
+  padding: 0 @sizeSmall;
 }
 
 .padded-small {
@@ -14,55 +18,35 @@
   padding: 0 @sizeLarge;
 }
 
-.no-padding {
-  padding: 0;
-}
-
-.no-padding-top {
-  padding-top: 0;
-}
-
-.no-padding-right {
-  padding-right: 0;
-}
-
-.no-padding-bottom {
-  padding-bottom: 0;
-}
-
-.no-padding-left {
-  padding-left: 0;
-}
-
 .padding {
-  padding: @rem;
+  padding: @sizeSmall;
 }
 
 .padding-bowl {
-  padding: 0 @rem @rem;
+  padding: 0 @sizeSmall @sizeSmall;
 }
 
 .padding-top {
-  padding-top: @rem;
+  padding-top: @sizeSmall;
 }
 
 .padding-right {
-  padding-right: @rem;
+  padding-right: @sizeSmall;
 }
 
 .padding-bottom {
-  padding-bottom: @rem;
+  padding-bottom: @sizeSmall;
 }
 
 .padding-left {
-  padding-left: @rem;
+  padding-left: @sizeSmall;
 }
 
 .padding-large {
   padding: @sizeLarge;
 }
 
-.padding-bowl--large {
+.padding-bowl-large {
   padding: 0 @sizeLarge @sizeLarge;
 }
 
@@ -103,21 +87,25 @@
 }
 
 .padding-small {
-  padding: (@rem / 2);
+  padding: @gap;
 }
 
 .padding-top-small {
-  padding-top: (@rem / 2);
+  padding-top: @gap;
 }
 
 .padding-right-small {
-  padding-right: (@rem / 2);
+  padding-right: @gap;
 }
 
 .padding-bottom-small {
-  padding-bottom: (@rem / 2);
+  padding-bottom: @gap;
 }
 
 .padding-left-small {
-  padding-left: (@rem / 2);
+  padding-left: @gap;
+}
+
+.no-padding {
+  padding: 0;
 }

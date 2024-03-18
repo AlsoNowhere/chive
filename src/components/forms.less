@@ -3,15 +3,23 @@
 form {
   label {
     display: block;
-    .margin-bottom;
+    .margin-bottom-small;
 
     > span {
       .block;
-      .margin-bottom-small;
     }
 
     &.checkbox {
       display: flex;
+    }
+
+    &.required {
+      > span {
+        &::after {
+          content: "*";
+          .tomato-text;
+        }
+      }
     }
   }
 }
@@ -39,7 +47,7 @@ select {
 
 input,
 select {
-  .padded;
+  .padded-small;
 }
 
 input {
@@ -92,7 +100,7 @@ input {
       }
 
       + span {
-        .line-height-large;
+        line-height: @sizeLarge;
       }
     }
 
@@ -105,6 +113,8 @@ input {
   }
 
   &[type="radio"] {
+    .round;
+
     &::before {
       .round;
     }
@@ -120,7 +130,7 @@ select {
 }
 
 textarea {
-  .padding;
+  .padding-small;
   line-height: 1.1;
 }
 
@@ -129,9 +139,17 @@ fieldset {
   padding: 0;
   border: none;
 
+  &.linear {
+    .flex;
+
+    legend {
+      width: 100%;
+    }
+  }
+
   legend {
     display: block;
-    .margin-bottom;
+    .margin-bottom-small;
     padding: 0;
   }
 }
