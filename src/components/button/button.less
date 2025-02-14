@@ -20,7 +20,7 @@ button,
   .snow-bg;
   .button-border(@snowDark);
   .button-shadow(@snowDark);
-  line-height: @size;
+  // line-height: @size;
   font-family: @fontFamily;
   font-size: 1rem;
   cursor: pointer;
@@ -44,7 +44,7 @@ button,
   }
 
   &.empty {
-    background-color: transparent;
+    background-color: inherit;
     border: none;
     box-shadow: none;
     .hover;
@@ -78,7 +78,7 @@ button,
     align-items: center;
 
     .icon {
-      margin-right: 0.1rem;
+      margin-right: 0.1 * 1rem;
     }
 
     .extra-content {

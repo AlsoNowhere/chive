@@ -9,6 +9,13 @@ form {
       .block;
     }
 
+    &.large {
+      > span {
+        line-height: @sizeLarge;
+        font-size: @fontLarge;
+      }
+    }
+
     &.checkbox {
       display: flex;
     }
@@ -30,7 +37,7 @@ select {
   width: 100%;
   .border;
   .rounded;
-  line-height: calc(2rem - @borderSize * 2);
+  line-height: calc(2 * 1rem - @borderSize * 2);
   font-family: @fontFamily;
   font-size: 1rem;
   .focus;
@@ -40,7 +47,7 @@ select {
   }
 
   &.large {
-    line-height: 4rem;
+    line-height: 4 * 1rem;
     font-size: @fontLarge;
   }
 }
@@ -70,8 +77,8 @@ input {
       display: block;
       position: absolute;
       .middle;
-      width: (@size * 0.8);
-      height: (@size * 0.8);
+      width: @size;
+      height: @size;
       .border;
     }
 
@@ -101,6 +108,7 @@ input {
 
       + span {
         line-height: @sizeLarge;
+        font-size: @fontLarge;
       }
     }
 
