@@ -1,5 +1,13 @@
 @import "../core/display.less";
 
+// ** The size of the label; site font size plus the margin underneath.
+@labelSize: 1rem + 1rem * 0.2;
+// ** The size of the Input field; twice the site font size.
+@inputSize: 2 * 1rem;
+// ** We devrive this value from the height of two input fields.
+// ** i.e 2 input element heights, 1 label height and 1 margin underneath an input field.
+@textAreaHeight: (@inputSize * 2) + @labelSize + @gap;
+
 form {
   label {
     display: block;
@@ -7,6 +15,8 @@ form {
 
     > span {
       .block;
+      margin-bottom: 1rem * 0.2;
+      line-height: 1;
     }
 
     &.large {
@@ -138,6 +148,7 @@ select {
 }
 
 textarea {
+  height: @textAreaHeight;
   .padding-small;
   line-height: 1.1;
 }
