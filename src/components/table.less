@@ -1,0 +1,26 @@
+table.table {
+  width: 100%;
+  border: @borderSize solid @smokeLight;
+  font-size: 1rem;
+
+  thead {
+    th {
+      background-color: @smoke;
+      border-bottom: @borderSize solid @smokeLight;
+      text-align: left;
+    }
+  }
+
+  tr {
+    .flex;
+    width: 100%;
+  }
+
+  th,
+  td {
+    display: block;
+    flex-grow: 1;
+    margin: -2px;
+    padding: @gap;
+  }
+}

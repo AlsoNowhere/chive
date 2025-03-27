@@ -24,6 +24,19 @@
   }
 
   &__button {
+    color: @snow;
+
+    svg {
+      position: absolute;
+      .middle;
+      width: @size;
+      height: @size;
+
+      line {
+        stroke: @snow;
+      }
+    }
+
     &:hover {
       svg line {
         stroke: @black;
