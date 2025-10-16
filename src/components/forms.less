@@ -11,10 +11,10 @@
 form {
   label {
     display: block;
-    .margin-bottom-small;
+    .margin-bottom-small();
 
     > span {
-      .block;
+      .block();
       margin-bottom: 1rem * 0.2;
       line-height: 1;
     }
@@ -34,7 +34,7 @@ form {
       > span {
         &::after {
           content: "*";
-          .tomato-text;
+          .tomato-text();
         }
       }
     }
@@ -45,12 +45,12 @@ input,
 textarea,
 select {
   width: 100%;
-  .border;
-  .rounded;
+  .border();
+  .rounded();
   line-height: calc(2 * 1rem - @borderSize * 2);
   font-family: @fontFamily;
   font-size: 1rem;
-  .focus;
+  .focus();
 
   &:focus {
     outline: none;
@@ -64,7 +64,7 @@ select {
 
 input,
 select {
-  .padded-small;
+  .padded-small();
 }
 
 input {
@@ -76,8 +76,8 @@ input {
     appearance: none;
     display: inline-block;
     position: relative;
-    .width;
-    .height;
+    .width();
+    .height();
     margin: 0;
     padding: 0;
     border: none;
@@ -86,25 +86,25 @@ input {
       content: "";
       display: block;
       position: absolute;
-      .middle;
+      .middle();
       width: @size;
       height: @size;
-      .border;
+      .border();
     }
 
     &:checked::after {
       content: "";
       display: block;
       position: absolute;
-      .middle;
+      .middle();
       width: (@size * 0.4);
       height: (@size * 0.4);
-      .black-bg;
+      .black-bg();
     }
 
     &.large {
-      .width-large;
-      .height-large;
+      .width-large();
+      .height-large();
 
       &::before {
         width: (@sizeLarge * 0.8);
@@ -131,14 +131,14 @@ input {
   }
 
   &[type="radio"] {
-    .round;
+    .round();
 
     &::before {
-      .round;
+      .round();
     }
 
     &:checked::after {
-      .round;
+      .round();
     }
   }
 }
@@ -149,7 +149,7 @@ select {
 
 textarea {
   height: @textAreaHeight;
-  .padding-small;
+  .padding-small();
   line-height: 1.1;
 }
 
@@ -159,7 +159,7 @@ fieldset {
   border: none;
 
   &.linear {
-    .flex;
+    .flex();
 
     legend {
       width: 100%;
@@ -168,7 +168,7 @@ fieldset {
 
   legend {
     display: block;
-    .margin-bottom-small;
+    .margin-bottom-small();
     padding: 0;
   }
 }

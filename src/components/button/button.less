@@ -16,20 +16,19 @@ button,
 .button {
   position: relative;
   height: @size;
-  .padded-small;
-  .snow-bg;
+  .padded-small();
+  .snow-bg();
   .button-border(@snowDark);
   .button-shadow(@snowDark);
-  // line-height: @size;
   font-family: @fontFamily;
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
-  .hover;
-  .focus;
+  .hover();
+  .focus();
 
   &:not(.empty) {
-    .rounded;
+    .rounded();
   }
 
   &:focus {
@@ -47,12 +46,12 @@ button,
     background-color: inherit;
     border: none;
     box-shadow: none;
-    .hover;
+    .hover();
 
     &:hover {
-      .black-text;
+      .black-text();
     }
-    .focus;
+    .focus();
   }
 
   &.square {
@@ -68,11 +67,11 @@ button,
 
   &.large {
     height: @sizeLarge;
-    .font-size-large;
+    .font-size-large();
   }
 
   &.multi-content {
-    .flex;
+    .flex();
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;

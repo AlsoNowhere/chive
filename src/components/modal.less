@@ -49,7 +49,7 @@
 
   &::after {
     content: "";
-    .fade-in;
+    .fade-in();
     position: absolute;
     top: 0;
     left: 0;
@@ -67,7 +67,7 @@
 
     &.closing {
       &::after {
-        .fade-out;
+        .fade-out();
       }
 
       .modal__content {
@@ -79,58 +79,63 @@
   /* Adding padding will affect the heading too */
   &__content {
     position: absolute;
-    .z-index;
+    .z-index();
     top: 50%;
     left: 50%;
     width: 25%;
-    .snow-bg;
-    .rounded;
+    .snow-bg();
+    .rounded();
     transform: translate(-50%, -50%);
-    .trim;
+    .trim();
   }
 
   &__header {
     width: 100%;
-    .margin-bottom;
-    .padded;
-    .shadow;
-    .line-height;
+    .margin-bottom();
+    .padded();
+    .shadow();
+    .line-height();
 
     &--large {
       line-height: @sizeLarge;
-      .font-size-large;
+      .font-size-large();
     }
 
     &.blueberry {
-      .blueberry-bg;
+      .blueberry-bg();
+      .snow-text();
     }
 
     &.apple {
-      .apple-bg;
+      .apple-bg();
+      .snow-text();
     }
 
     &.lemon {
-      .lemon-bg;
+      .lemon-bg();
     }
 
     &.orange {
-      .orange-bg;
+      .orange-bg();
+      .snow-text();
     }
 
     &.tomato {
-      .tomato-bg;
+      .tomato-bg();
+      .snow-text();
     }
 
     &.snow {
-      .snow-bg;
+      .snow-bg();
     }
 
     &.smoke {
-      .smoke-bg;
+      .smoke-bg();
     }
 
     &.black {
-      .black-bg;
+      .black-bg();
+      .snow-text();
     }
 
     h2 {
@@ -139,11 +144,11 @@
   }
 
   &__inner-content {
-    .padding;
+    .padding();
   }
 
   &--animate-centre {
-    .middle;
+    .middle();
 
     &.open {
       display: block;
